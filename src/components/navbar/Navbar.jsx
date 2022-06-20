@@ -3,7 +3,7 @@ import "./navbar.css"
 
 const Navbar = () => {
   returN (
-    <div>Navbar</div>
+    <div className='navbar'>Navbar</div>
   )
 }
 
