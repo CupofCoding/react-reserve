@@ -2,7 +2,7 @@ import React from 'react'
 import "./navbar.css"
 
 const Navbar = () => {
-  returN (
+  return (
     <div className='navbar'>
         <div className="navContainer">
             <span className="logo">PeasTravel</span>
