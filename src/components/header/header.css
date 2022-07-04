@@ -77,3 +77,8 @@
     color: lightgray;
     cursor: pointer;
 }
+
+.dateCalender{
+    position: absolute;
+    top: 52px;
+}
