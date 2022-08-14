@@ -1,24 +1,29 @@
 .header{
-    background-color: navy;
+    background-color: #578F53;
+    /* background: linear-gradient(#578F53, #578F53 ,transparent); */
+    /* background-image: url(https://picsum.photos/2000/350); */
     color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
     position : relative;
 }
 
 .headerContainer {
     width: 100%;
     max-width: 1024px;
-    margin:  20px 0px 100px 0px;
+    margin:  50px 0px 80px 0px;    
 }
 
+/* if type === list then adjust below */
 .headerContainer.listMode {    
-    margin:  20px 0px 10px 0px;
+    margin:  20px 0px 60px 0px;
 }
 
 .headerList {
     display: flex;
     gap: 40px;
+    margin-bottom: 10px;
 }
 
 .headerListItem{
@@ -33,8 +38,21 @@
     padding: 10px;
 }
 
+.activeListItem{
+    padding: 7.5px 15px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
 .headerDescription{
     margin: 20px 0px;
+}
+
+.headerBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;    ;
 }
 
 .headerButton{
@@ -42,9 +60,13 @@
     border-radius: 2.5px;
     padding: 10px;
     color: white;
-    background-color: #3838A9;
+    background-color: #1D3C26;
     font-weight: 500;
     cursor: pointer;
+}
+
+.headerButton:hover{
+    opacity: .9;
 }
 
 .headerSearch{
@@ -54,7 +76,7 @@
     padding: 10px 0px;
     bottom: -25px;
     background-color: white;
-    border: 3px solid orange;
+    border: 3px solid #1D3C26;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -120,8 +142,8 @@
 .guestCounterButton{
     width: 30px;
     height: 30px;
-    border: 1px solid #3838A9;
-    color: #3838A9;
+    border: 1px solid #1D3C26;
+    color: #1D3C26;
     background-color: white;
     cursor: pointer;
     border-radius: 2.5px;

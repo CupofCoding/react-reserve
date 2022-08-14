@@ -1,21 +1,25 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import { faBed, faCalendarDays, faCar, faFaceGrinBeam, faPerson, faPlane, faTaxi } from '@fortawesome/free-solid-svg-icons';
 import "./header.css";
 import { useState } from 'react';
 import { DateRange } from 'react-date-range';
+import { format } from 'date-fns';
+import { useNavigate } from "react-router-dom";
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { format } from 'date-fns';
+
 
 const Header = ({ type }) => {
+    const [destination, setDestination] = useState("")
+    // useState to make sure calendar component isn't displaying by default when page loads
     const [openCalendar, setOpenCalendar] = useState(false)
+    // set state with object array, date-fns library converts from javascript dates to readable strings. 
     const [date, setDate] = useState([
         {
           startDate: new Date(),
           endDate: new Date(),
           key: 'selection'
-        }
+        }, 
       ]);
     
     const [openGuests, setOpenGuests] = useState(false);
@@ -25,18 +29,27 @@ const Header = ({ type }) => {
         rooms: 1,
     });
 
-    const handleGuest = (name, operation) =>
-    setGuests((prev) => {
-        return {
-            ...prev, 
-            [name]: operation === 'incr' ? guests[name] ++ : guests[name] --,
-        };
-    });
-// };
-    // previous condition, name inside an array to find name inside object followed by condition which will find the object when the name is pulled.
+    const handleGuest = (name, operation) => {
+        setGuests((prev) => {
+            return {                
+                // previous condition, locates name inside an array to find name inside object followed by condition which will find the object when the name is pulled. ++ if condition matches name 'incr', if not then --
+                ...prev, 
+                [name]: operation === 'incr' ? guests[name] ++ : guests[name] --,
+            };
+        });
+    };    
+
+    //react-router-dom navigate allows redirect of any component on any page
+    const navigate = useNavigate ()
+
+    //shove changes to /flights(<List />)
+    const handleSearch = () => {
+        navigate("/flights", {state:{ destination,date,guests }})
+    }
 
   return (
     <div className="header">
+        {/* set condition for type to adjust style in css*/}
         <div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
             <div className="headerList">
                 <div className="headerListItem active">
@@ -60,6 +73,7 @@ const Header = ({ type }) => {
                     <span>Taxis</span>
                 </div>
             </div>
+            {/* {<></>} to create fragment and set type to !list so it doesn't display on results/List page */}
             { type !== "list" &&
                 <>
                 <h1 className="headerTitle">Sales pitch goes here. It's hard.</h1>
@@ -81,9 +95,12 @@ const Header = ({ type }) => {
                         {openCalendar && <DateRange
                             className='dateCalender'
                             editableDateInputs={true}
+                            // setStateAction for onChange to update date when clicked
                             onChange={item => setDate([item.selection])}
                             moveRangeOnFirstSelection={false}
                             ranges={date}
+                            //can't select a date from the past
+                            minDate={new Date()}
                             />}
                     </div> 
                     <div className="headerSearchItem">
@@ -94,7 +111,7 @@ const Header = ({ type }) => {
                         {`${guests.adults} adults | ${guests.children} children | ${guests.rooms} rooms`}</span>
                         {openGuests && <div className="guests">
                             <div className="guestItem">
-                                <span className="guestText">Adults</span>
+                                <span className="guestText">Adult(s)</span>
                                 <div className="guestCounter">
                                     <button 
                                     disabled={guests.adults <= 1}
@@ -135,7 +152,8 @@ const Header = ({ type }) => {
                         </div>}
                     </div> 
                     <div className="headerSearchItem">
-                        <button className="headerButton">Search</button>
+                        {/* onClick event  */}
+                        <button className="headerButton" onClick={handleSearch}>Search</button>
                     </div>
                 </div>
             </>}
