@@ -7,11 +7,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px
+    gap: 20px;
 }
 
 
-.domesticTitle{
+.homeTitle{
     width: 100%;
     max-width: 1024px;
     font: 1.5em sans-serif;

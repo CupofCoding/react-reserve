@@ -3,7 +3,9 @@ import "./home.css"
 import Navbar from '../../components/navbar/Navbar'
 import Header from '../../components/header/Header'
 import Recommended from '../../components/recommended/Recommended'
-// import StateList from '../../components/stateList/StateList'
+import PropertyList from '../../components/propertyList/PropertyList'
+import RecommendedProperties from '../../components/recommendedProperties/RecommendedProperties'
+import EmailList from '../../components/emailList/EmailList'
 
 const Home = () => {
   return (
@@ -12,8 +14,11 @@ const Home = () => {
       <Header />
       <div className='homeContainer'>
         <Recommended />
-        <h1 className="domesticTitle">Browse by Type</h1>
-        {/* <StateList /> */}
+        <h1 className="homeTitle">Browse by Type</h1>
+        <PropertyList />
+        <h1 className="homeTitle">Places recommended by guests!</h1>
+        <RecommendedProperties />
+        <EmailList />
       </div>
     </div>
   )

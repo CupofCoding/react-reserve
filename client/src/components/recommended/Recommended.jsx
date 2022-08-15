@@ -5,24 +5,24 @@ const Recommended = () => {
   return (
     <div className='recommended'>
       <div className='recommendedItem'>
-        <img src='https://images.unsplash.com/photo-1558983731-16245204a27d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80' alt="Maui, Hawaii, USA by Pascal Debrunner - Michael's Pick" className='recommendedImg grow'/>
+        <img src='https://images.unsplash.com/photo-1515524042669-de726ea3283d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2125&q=80' alt="Fort Lewis Lodge &amp; Farm by Collin Armstrong" className='recommendedImg grow'/>
         <div className="recommendedTitles">
-          {/* <h1>Maui, Hawaii, USA</h1> */}
-          <h2>Maui, Hawaii</h2>
+          <h1>Fort Lewis Lodge</h1>
+          <h2>Millboro, VA</h2>
         </div>
       </div>
       <div className='recommendedItem'>
-        <img src='https://images.unsplash.com/photo-1545333547-01945a994684?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80' alt="Kualoa Ranch, Kaneohe, Hawaii, United States by Seth Cottle - Anne's Pick" className='recommendedImg grow'/>
+        <img src='https://images.unsplash.com/photo-1516906561371-53f48df1254d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80' alt="Vinales, Cuba by Kenan Kitchen" className='recommendedImg grow'/>
         <div className="recommendedTitles">
-          {/* <h1>Kualoa Ranch, Kaneohe, Hawaii, United States</h1> */}
-          <h2>Kualoa Ranch, Hawaii</h2>
+          <h1>Vinales Garden</h1>
+          <h2>Vinales, Cuba</h2>
         </div>
       </div>
       <div className='recommendedItem'>
-        <img src='https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80' alt="Kauai County, Hawaii, USA by Braden Jarvis - Paul's Pick" className='recommendedImg grow'/>
+        <img src='https://images.unsplash.com/photo-1592327379194-7964e6a5c1e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2128&q=80' alt="Fair Head, Ballycastle, Northern Ireland, UK by K. Mitch Hodge" className='recommendedImg grow'/>
         <div className="recommendedTitles">
-          {/* <h1>Kauai County, United States</h1> */}
-          <h2>Kauai County, Hawaii</h2>
+          <h1>Fair Head</h1>
+          <h2>Northern Ireland, UK</h2>
         </div>
       </div>
 

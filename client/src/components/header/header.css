@@ -12,7 +12,7 @@
 .headerContainer {
     width: 100%;
     max-width: 1024px;
-    margin:  50px 0px 80px 0px;    
+    margin:  50px 0px 80px 0px;
 }
 
 /* if type === list then adjust below */
@@ -71,8 +71,8 @@
 
 .headerSearch{
     height: 30px;
-    width: 100%;
-    max-width: 1024px;
+    width: fill;    
+    max-width: calc(1024px - 6px);
     padding: 10px 0px;
     bottom: -25px;
     background-color: white;
