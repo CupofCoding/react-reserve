@@ -1,5 +1,5 @@
 .email{
-    width: 100%;
+    width: 100%;    
     margin-top: 50px;
     background-color: #1D3C26;
     color: white;
@@ -7,11 +7,12 @@
     flex-direction: column;
     align-items: center;
     gap: 20px 0;
-    padding: 50px;
+    padding: 50px 0;
   }
 
   .emailInputContainer{
     display: flex;
+    max-width: 1024px;
   }
   
   .emailInputContainer>input{

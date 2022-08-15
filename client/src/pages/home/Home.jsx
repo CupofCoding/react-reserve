@@ -6,6 +6,7 @@ import Recommended from '../../components/recommended/Recommended'
 import PropertyList from '../../components/propertyList/PropertyList'
 import RecommendedProperties from '../../components/recommendedProperties/RecommendedProperties'
 import EmailList from '../../components/emailList/EmailList'
+import Footer from '../../components/footer/Footer'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <h1 className="homeTitle">Places recommended by guests!</h1>
         <RecommendedProperties />
         <EmailList />
+        <Footer />
       </div>
     </div>
   )

@@ -50,11 +50,11 @@ const List = () => {
                 <div className="listOptions">
                   <label> Options </label>
                   <div className="listOptionItem">
-                    <span className="listOptionText"> Min price <small>for flight</small></span>
+                    <span className="listOptionText"> Min price <small>for room</small></span>
                     <input type="number" className='listOptionInput'/>
                   </div>
                   <div className="listOptionItem">
-                    <span className="listOptionText"> Max price <small>for flight</small></span>
+                    <span className="listOptionText"> Max price <small>for room</small></span>
                     <input type="number" className='listOptionInput'/>
                   </div>
                   <div className="listOptionItem">
@@ -66,8 +66,8 @@ const List = () => {
                     <input type="number" min={0} className='listOptionInput' placeholder={guests.children}/>
                   </div>
                   <div className="listOptionItem">
-                    <span className="listOptionText"> Infant(s) </span>
-                    <input type="number" min={0} className='listOptionInput' placeholder={guests.infants}/>
+                    <span className="listOptionText"> Room(s) </span>
+                    <input type="number" min={0} className='listOptionInput' placeholder={guests.rooms}/>
                   </div>
                 </div>
               </div>

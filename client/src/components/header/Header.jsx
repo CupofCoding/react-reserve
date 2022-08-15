@@ -44,7 +44,7 @@ const Header = ({ type }) => {
 
     //shove changes to /flights(<List />)
     const handleSearch = () => {
-        navigate("/flights", {state:{ destination,date,guests }})
+        navigate("/hotels", {state:{ destination,date,guests }})
     }
 
   return (

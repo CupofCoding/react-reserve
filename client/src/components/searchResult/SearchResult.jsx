@@ -9,27 +9,34 @@ const SearchResult = () => {
             className="searchResImg" 
         />
         <div className="searchResDesc">
-            <div className="searchResInfo">
-                <h1 className="searchResTitle">Departure Time - Arrival Time</h1>
-                <div className="searchResDepart">
-                    <div className="searchResItem">
-                        <span className="searchResLocation">Los Angeles International (LAX) - Madrid</span>
-                        <span className="searchResAirline">Spirit Airlines</span>
+            <div className="searchResTitles">
+                <h1 className="searchResTitle">Location Name</h1>
+                <div className="searchResRating">
+                    <span>Excellent</span>
+                    <button>4.5</button>
+                </div>
+            </div>
+            <div className="searchResDetails">
+                <span className="searchResSlogan">"Quote/Review about stay." - Customer</span>
+                <div className="searchResInfo">
+                    <div className="searchResDepart">
+                        <div className="searchResItem">
+                            <span className="searchResLocation">Location Street Address</span>
+                            <span className="searchResAirline">City, ST, Country</span>
+                        </div>
+                    </div>
+                    <div className="searchResCost">
+                        <div className="searchResItem">
+                            <span className="searchResCostAdult"><h2>$160</h2></span>
+                            <span className="searchResCostAdultSubTitle sub-text">includes taxes and fees</span>
+                        </div>
+                        <div className="searchResItem">
+                            <button className="searchResCheckButton">See availability</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="searchResCost">
-                <div className="searchResItem">
-                    <span className="searchResCostAdult"><h2>$160</h2></span>
-                    <span className="searchResCostAdultSubTitle sub-text">per Traveler(18+)</span>
-                </div>
-                <div className="searchResItem">
-                    <span className="searchResCostNotAdult"><h2>$104</h2>{/*(65%)*/}</span>
-                    <span className="searchResCostNotAdultSubTitle">per miniTraveler</span>
-                </div>
-            </div>
         </div>
-        <div className="searchResDetails"></div>
     </div>
   )
 }
