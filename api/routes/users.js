@@ -9,6 +9,7 @@ import { verifyAdmin, verifyToken, verifyUser } from "../utilities/verifyToken.j
 
 const router = express.Router();
 
+////user cookie token check for authentication
 // router.get("/checkauthentication", verifyToken, (req,res,next)=>{
 //   res.send("hello user, you are logged in")
 // })

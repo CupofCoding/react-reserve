@@ -31,7 +31,7 @@ export const login = async (req, res, next) => {
     if (!isPasswordCorrect)
       return next(createError(400, "Wrong password or username!"));
 
-      // user._id informations going to be hashed and jwt will verify identity
+      // user._id informations going to be hashed and jwt will verify token first, then check user info and if it's admin then allow further actions
       //'openssl rand -base64 32' for generated password for env file.
       const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
@@ -40,6 +40,7 @@ export const login = async (req, res, next) => {
 
     const { password, isAdmin, ...otherDetails } = user._doc;
     res
+    // cookie-parser handling access tokens, restricts clients from accessing the cookie
       .cookie("access_token", token, {
         httpOnly: true,
       })

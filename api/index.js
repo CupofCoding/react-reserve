@@ -6,6 +6,7 @@ import authRoute from "./routes/auth.js"
 import usersRoute from "./routes/users.js"
 import hotelsRoute from "./routes/hotels.js"
 import roomsRoute from "./routes/rooms.js"
+import cookieParser from "cookie-parser";
 
 // const express = require("express")
 //instead of needing the following ^this line, added it to package.json after "main": "...", add '"type": "module",'
@@ -36,6 +37,7 @@ app.get("/", (req, res)=>{
 
 //middlewares (imported endpoints)
 //allows the information to be sent in json format from the body
+app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
