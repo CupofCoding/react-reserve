@@ -10,6 +10,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 
 
 const Header = ({ type }) => {
+    // eslint-disable-next-line
     const [destination, setDestination] = useState("")
     // useState to make sure calendar component isn't displaying by default when page loads
     const [openCalendar, setOpenCalendar] = useState(false)

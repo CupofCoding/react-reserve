@@ -11,9 +11,11 @@ const List = () => {
   // useLocation hook returns the current location object. Performs some side effect whenever the current location changes.
   const location = useLocation()
   //since it's not globally scoped, need to redefine states
+  // eslint-disable-next-line
   const [destination,setDestination] = useState(location.state.destination)
   const [date,setDate] = useState(location.state.date)
   const [openCalendar, setOpenCalendar] = useState(false)
+  // eslint-disable-next-line
   const [guests,setGuests] = useState(location.state.guests)
 
   // console.log(location)
