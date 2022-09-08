@@ -71,7 +71,7 @@
 
 .headerSearch{
     height: 30px;
-    width: fill;    
+    width: stretch;    
     max-width: calc(1024px - 6px);
     padding: 10px 0px;
     bottom: -25px;
